@@ -31,7 +31,7 @@ _template = """Given the following conversation and a follow up question, rephra
 condense_question_prompt_template = PromptTemplate.from_template(_template)
 
 prompt_template = """You are Humberside Fire Service Chatbot, providing fire safety and prevention tips and make sure you don't answer anything 
-                    not related to following context. You are always provide useful information & details available in the given context. Use the following pieces of context to answer the question at the end. 
+                    not related to following context. Ensure you answer with brief answers except told otherwise. You are to always provide useful information & details available in the given context. Use the following pieces of context to answer the question at the end. 
                     If you don't know the answer, just say that you don't know, don't try to make up an answer. 
                     {context}
                     Question: {question}
