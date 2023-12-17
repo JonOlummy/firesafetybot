@@ -78,7 +78,8 @@ urls = [
     "https://humbersidefire.gov.uk/your-safety/business-safety/cost-of-living-advice-for-businesses-and-building-owners",
     "https://humbersidefire.gov.uk/your-safety/road-safety",
     "https://humbersidefire.gov.uk/your-safety/water-safety-and-drowning-prevention",
-    "https://humbersidefire.gov.uk/contact-us"
+    "https://humbersidefire.gov.uk/contact-us",
+    "https://humbersidefire.gov.uk/about-us/principles-and-behaviours"
     
 ]
 

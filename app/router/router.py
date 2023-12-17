@@ -1,13 +1,13 @@
 import sys
 from pathlib import Path
 from fastapi import APIRouter, HTTPException
-sys.path.append(str(Path(__file__).resolve().parent.parent))
-
 from fastapi.responses import StreamingResponse
 from fastapi import APIRouter
-from model.chat_model import get_conversation_chain_openai,get_conversation_chain_llama,get_conversation_chain_falcon,get_conversation_chain_bloke,get_conversation_chain_flan, get_vectorstore
+from app.model.chat_model import get_conversation_chain_openai, get_conversation_chain_ChatCohere, get_vectorstore
 from starlette.responses import JSONResponse
 
+
+sys.path.append(str(Path(__file__).resolve().parent.parent))
 
 router = APIRouter()
 
@@ -23,13 +23,11 @@ async def async_ask(question_body: Question, session_id: str = "default"):
     question_text = question_body.question
 
     vectorstore = get_vectorstore()
-    conversation_chain = get_conversation_chain_openai(vectorstore)
-    # conversation_chain = get_conversation_chain_llama(vectorstore)
-    # conversation_chain = get_conversation_chain_flan(vectorstore)
-    # conversation_chain = get_conversation_chain_bloke(vectorstore)
-    # conversation_chain = get_conversation_chain_falcon(vectorstore)
     
+    # conversation_chain = get_conversation_chain_openai(vectorstore)
+    conversation_chain = get_conversation_chain_ChatCohere(vectorstore)
     
+
     response = conversation_chain({'question': question_text})
     chat_history = response['chat_history']
     
