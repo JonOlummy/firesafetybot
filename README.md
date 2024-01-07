@@ -1,6 +1,3 @@
-Certainly! Below is a detailed `README.md` file for your project. This file explains the setup and usage of your chatbot application, which utilizes FastAPI and various AI models for conversation and retrieval.
-
----
 
 # Chatbot Application
 
