@@ -10,7 +10,7 @@ from pathlib import Path
 import os
 from langchain.prompts import PromptTemplate
 from langchain.chains.question_answering import load_qa_chain
-
+from aiocache import cached
 
 
 load_dotenv()
@@ -45,8 +45,8 @@ prompt_template = """
                           
 qa_prompt = PromptTemplate(template=prompt_template, input_variables=["context","question"])
 
-
-def get_vectorstore():
+@cached()
+async def get_vectorstore():
     # embeddings = HuggingFaceInstructEmbeddings(model_name="hkunlp/instructor-large")
     embeddings = HuggingFaceInstructEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
     vectorstore = FAISS.load_local(DB_FAISS_PATH, embeddings)

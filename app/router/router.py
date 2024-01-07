@@ -22,10 +22,10 @@ class Question(BaseModel):
 async def async_ask(question_body: Question, session_id: str = "default"):
     question_text = question_body.question
 
-    vectorstore = get_vectorstore()
+    vectorstore = await get_vectorstore()
     
-    # conversation_chain = get_conversation_chain_openai(vectorstore)
-    conversation_chain = get_conversation_chain_ChatCohere(vectorstore)
+    conversation_chain = get_conversation_chain_openai(vectorstore)
+    # conversation_chain = get_conversation_chain_ChatCohere(vectorstore)
     
 
     response = conversation_chain({'question': question_text})
