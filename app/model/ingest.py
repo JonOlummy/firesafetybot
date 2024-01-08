@@ -79,9 +79,13 @@ urls = [
     "https://humbersidefire.gov.uk/your-safety/road-safety",
     "https://humbersidefire.gov.uk/your-safety/water-safety-and-drowning-prevention",
     "https://humbersidefire.gov.uk/contact-us",
-    "https://humbersidefire.gov.uk/about-us/principles-and-behaviours"
-    
+    "https://humbersidefire.gov.uk/about-us/principles-and-behaviours",
+    "https://nfcc.org.uk/our-services/building-safety",
+    "https://www.legislation.gov.uk/ukpga/2004/21/contents",
+    "https://staywise.co.uk/public",
+    "https://firekills.campaign.gov.uk"
 ]
+
 
 
 # Create vector database
