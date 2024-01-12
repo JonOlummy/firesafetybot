@@ -2,7 +2,7 @@
 # Chatbot Application
 
 ## Overview
-This chatbot application integrates AI models from OpenAI, ChatCohere, and HuggingFace FLAN, providing an interactive interface for users to ask questions and receive responses. It utilizes FastAPI for the web framework and FAISS for efficient similarity search in large datasets.
+This chatbot application integrates AI models from OpenAI and ChatCohere providing an interactive interface for users to ask questions and receive responses. It utilizes FastAPI for the web framework and FAISS for efficient similarity search in large datasets.
 
 ## Features
 - **AI Chat Models:** Utilizes models like GPT-3.5-turbo (OpenAI) and ChatCohere for generating responses.
