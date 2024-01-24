@@ -31,7 +31,8 @@ This chatbot application integrates AI models from OpenAI and ChatCohere providi
 
 3. **Environment Setup:**
    - Create a `.env` file in the root directory.
-   - Add your HuggingFace API token: `HUGGINGFACE_TOKEN=your_token_here`.
+   - Add OpenAI key: `OPENAI_API_KEY=open_ai_key`
+   - Add HuggingFace API token: `HUGGINGFACE_TOKEN=your_token_here`.
 
 ## Usage
 1. **Start the Server:**
@@ -44,7 +45,7 @@ This chatbot application integrates AI models from OpenAI and ChatCohere providi
    - Retrieve chat history by sending a GET request to `/chat/history`.
 
 3. **Building the FAISS Index:**
-   - Run the `create_vector_db()` function from `ingest.py` to build the FAISS index with your desired documents.
+   - Run the `create_vector_db()` function from `ingest.py` to build the FAISS index, you can change the websites list.
 
 ## API Reference
 - `POST /ask`: Endpoint to ask a question to the chatbot. Expects a payload with the question.
